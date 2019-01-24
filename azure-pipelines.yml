@@ -1,0 +1,17 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'VS2017-Win2016'
+
+variables:
+  solution: 'vsprojects/pcsx-redux.sln'
+  buildPlatform: 'x86'
+  buildConfiguration: 'Release'
+
+steps:
+- task: VS2017 32bit Release
+  inputs:
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
