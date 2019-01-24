@@ -10,7 +10,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: VS2017 32bit Release
+- task: VSBuild@1
   inputs:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
